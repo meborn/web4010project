@@ -1,0 +1,118 @@
+/*colors
+red #ff4447
+blue #4978ff
+white/grey #f2f2f2
+green #0fc47a
+yellow #ffdf4c*/
+
+body {
+	background-color: #f2f2f2;
+}
+
+.blue_text {
+	color:#888;
+}
+
+.navbar-default {
+	border-color:#0fc47a;
+}
+
+.navbar-default .navbar-brand {
+	color:#0fc47a;
+}
+.navbar-default a.navbar-brand:hover {
+	color:#4978ff;
+}
+
+.navbar-brand .glyphicon {
+	color:#4978ff;
+}
+
+.study {
+	font-family: 'Give You Glory', cursive;	
+}
+
+.buddy {
+	font-family: 'Give You Glory', cursive;
+}
+
+.navbar-default .navbar-nav li a {
+	color:#4978ff;
+}
+
+.navbar-default .navbar-nav li a:hover {
+	color:#0fc47a;
+}
+
+section {
+	padding:70px 0px;
+	padding-top: 50px;
+}
+
+#classes-accordion h4.panel-title {
+	display: inline-block;
+}
+.new_exam_link {
+	float: right;
+}
+
+.btn_container {
+	display: none;
+}
+
+#start_over {
+	display: none;
+}
+
+#card {
+	margin:0px auto;
+	width:580px;
+	height:380px;
+}
+
+.front {
+	background-color: #fff;
+	margin:0px auto;
+	width: 580px;
+	height: 380px;
+}
+
+.back {
+	background-color: #fff;
+	margin:0px auto;
+	width: 580px;
+	height: 380px;
+}
+
+.back p, .front p {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 32px;
+
+}
+
+#progress_bar {
+	margin:20px auto;
+	width:300px;
+	height:10px;
+	border:1px solid #0fc47a;
+}
+
+#progress {
+	height:8px;
+}
+
+#congrats_row {
+	display: none;
+}
+.answer_slot {
+	width:200px;
+	height:50px;
+	border:1px solid #888;
+}
+
+.answer {
+	width:200px;
+	height:50px;
+	border:1px solid #888;
+}
