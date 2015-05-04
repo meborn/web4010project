@@ -26,6 +26,16 @@
 					</a>
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<p>Progress <span id="progress_fraction"></span></p>
+					<div id="progress_bar">
+						<div id="progress">
+
+						</div>
+					</div>
+				</div>
+			</div>
 			<div id="matching_row" class="row">
 				<div class="col-xs-6">
 					<ul id="question_list" class="list-group">

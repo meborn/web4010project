@@ -15,7 +15,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-md-8">
-				<h3 class="blue_text">My Classes</h3>
+				<h3 class="blue_text inline_header">Classes</h3>
+				<a class="right_link btn btn-default" href="/~mneborn/web4010project/classes/new.php">New Class</a>
 				<div class="panel-group" id="classes-accordion" role="tablist" aria-multiselectable="true">
 					<?php $count = 0; ?>
 					<?php foreach($classes as $c):?>

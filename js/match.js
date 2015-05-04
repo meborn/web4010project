@@ -27,6 +27,16 @@ var setAndShuffle = function(questions) {
 	});
 }
 
+var getProgress = function() {
+	// var correct = correctQuestions.length
+	// var count = masterQuestions.length
+	var percent = Math.floor((correct/questions_length) * 100)+"%";
+	console.log(percent);
+	$('#progress').css('background-color', '#0fc47a');
+	$('#progress').css('width', percent);
+	$('#progress_fraction').text(correct+"/"+questions_length);
+}
+
 var handleCardDrop = function(event, ui) {
 			
 	var slotAnswer = $(this).data('answer');
@@ -41,7 +51,7 @@ var handleCardDrop = function(event, ui) {
 		$('#matching_row').toggle();
 		$('#done_row').toggle();
 	}
-	
+	getProgress();
 }
 
 var init = function(questions) {

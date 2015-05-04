@@ -95,6 +95,15 @@ class DB {
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 
+	function getQuestion($id) {
+		//get question
+		$sql = "SELECT * FROM questions WHERE id = :id";
+		$stmt = $this->connection->prepare($sql);
+		$stmt->bindParam('id', $id);
+		$stmt->execute();
+		return $stmt->fetch(PDO::FETCH_ASSOC);
+	}
+
 	function createQuestion($question) {
 		//create question
 		$sql = "INSERT INTO questions (exam_id, question, answer) VALUES (:exam_id, :question, :answer)";
@@ -116,6 +125,29 @@ class DB {
 			$_SESSION['error'] = "Error!";
 			header("Location: new.php?exam_id=$exam_id");
 		}
+	}
+
+	function updateQuestion($question) {
+		//update question
+		$sql = "UPDATE questions SET exam_id = :exam_id, question = :question, answer = :answer WHERE id = :id";
+		$stmt = $this->connection->prepare($sql);
+		$stmt->bindParam('id', $question['id']);
+		$stmt->bindParam('exam_id', $question['exam_id']);
+		$stmt->bindParam('question', $question['question']);
+		$stmt->bindParam('answer', $question['answer']);
+		$stmt->execute();
+
+		$_SESSION['Success!'];
+		$exam_id = $question['exam_id'];
+		header("Location: ../exams/show.php?id=$exam_id");
+	}
+
+	function deleteQuestion($id) {
+		$sql = "DELETE FROM questions WHERE id = :id";
+		$stmt = $this->connection->prepare($sql);
+		$stmt->bindParam('id', $id);
+		$stmt->execute();
+		
 	}
 
 }

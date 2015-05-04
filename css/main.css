@@ -8,9 +8,25 @@ yellow #ffdf4c*/
 body {
 	background-color: #f2f2f2;
 }
+h1, h2, h3, h4, h5 {
+	margin-top: 0px;
+}
 
 .blue_text {
 	color:#888;
+}
+
+.inline_header {
+	display: inline-block;
+}
+
+.class_name_link {
+	margin-right: 20px;
+}
+
+.right_link {
+	float: right;
+	vertical-align: bottom;
 }
 
 .navbar-default {
@@ -26,6 +42,10 @@ body {
 
 .navbar-brand .glyphicon {
 	color:#4978ff;
+}
+
+.panel-default {
+	margin-top: 20px;
 }
 
 .study {
@@ -54,6 +74,17 @@ section {
 }
 .new_exam_link {
 	float: right;
+}
+
+.game {
+	background-color: #fff;
+	height:200px;
+	text-align: center;
+	padding-top: 78px;
+}
+
+.game span {
+	font-size: 22px;
 }
 
 .btn_container {
@@ -112,6 +143,11 @@ section {
 }
 
 .answer {
+	padding-top: 10px;
+	font-size: 18px;
+	text-align: center;
+	background-color: #0fc47a;
+	color:#f2f2f2; 
 	width:200px;
 	height:50px;
 	border:1px solid #888;
