@@ -20,46 +20,30 @@
 	<section>
 		<div class="container">
 			<div class="row">
+				<div class="col-xs-12">
+					<a href=<?= $back_url ?> class="btn btn-default">
+						<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Back
+					</a>
+				</div>
+			</div>
+			<div id="matching_row" class="row">
 				<div class="col-xs-6">
-					<ul class="list-group">
-						<li class="list-group-item">
-							<p>Question 1</p>
-							<div class="answer_slot">
-
-							</div>
-						</li>
-						<li class="list-group-item">
-							<p>Question 2</p>
-							<div class="answer_slot">
-
-							</div>
-						</li>
-						<li class="list-group-item">
-							<p>Question 3</p>
-							<div class="answer_slot">
-
-							</div>
-						</li>
+					<ul id="question_list" class="list-group">
+						
 					</ul>
 				</div>
 				<div class="col-xs-6">
-					<ul class="list-group">
-						<li class="list-group-item">
-							<div class="answer">
-								Answer 1
-							</div>
-						</li>
-						<li class="list-group-item">
-							<div class="answer">
-								Answer 2
-							</div>
-						</li>
-						<li class="list-group-item">
-							<div class="answer">
-								Answer 3
-							</div>
-						</li>
+					<ul id="answer_list" class="list-group">
+						
 					</ul>
+				</div>
+			</div>
+			<div id="done_row" class="row">
+				<div class="col-xs-12 text-center">
+					<h1>Good Work!</h1>
+					<button id="matching_start_over" class="btn btn-default">
+						Start Over
+					</button>
 				</div>
 			</div>
 		</div>
@@ -69,19 +53,19 @@
 <?php
 	require '../footer.php';
 ?>
+<script src="/~mneborn/web4010project/js/match.js"></script>
 <script>
 	$(document).ready(function() {
-		var handleCardDrop = function(event, ui) {
-			ui.draggable.draggable('disable');
-			$(this).droppable('disable');
-			ui.draggable.draggable('option', 'revert', false);
-		}
-		$('.answer').draggable({
-			revert: true
-		});
-		$('.answer_slot').droppable({
-			accept: ".answer",
-			drop: handleCardDrop
+		var questions = <?= json_encode($questions) ?>;
+		
+		init(questions);
+		$('#matching_start_over').click(function() {
+			var questions = <?= json_encode($questions) ?>;
+			$('#question_list').empty();
+			$('#answer_list').empty();
+			init(questions);
+			$('#done_row').toggle();
+			$('#matching_row').toggle();
 		});
 	});
 </script>

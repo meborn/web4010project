@@ -15,7 +15,7 @@
 
 		<div class="collapse navbar-collapse" id="my_nav">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/~mneborn/web4010project/classes/">My Classes</a></li>
+				<li><a href="/~mneborn/web4010project/classes/">Classes</a></li>
 			</ul>
 		</div>
 	</div>

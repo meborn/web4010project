@@ -37,7 +37,7 @@
 				</div>
 			</div>
 			<div id="questions_row" class="row">
-				<div class="col-xs-12 text-center">
+				<div class="col-xs-12">
 					<h4 id="question"></h4>
 					<form>
 						<div class="radio">
